@@ -19,15 +19,20 @@ public class Limb extends Cell
     protected double l, w;
     protected double angle;
     protected double mass;
-    protected Joint joint1, joint2;
+    protected Joint left, right;
     protected Shape shape;  
     
-    public Limb(Joint j1, Joint j2, double mass)
+    public Limb(Joint l, Joint r, double mass)
     {
-        joint1 = j1;
-        joint2 = j2;
+        left = l;
+        right = r;
         this.mass = mass;
         //put in angle based on joints along with x,y
+        
+    }
+    
+    public Limb()
+    {
         
     }
 }

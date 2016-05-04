@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package walkers;
+import neuralnet.*;
+import genes.DNA;
 
 /**
  *
@@ -11,10 +13,26 @@ package walkers;
  */
 public class Bot extends Limb
 {
-    
-    public Bot(Joint j1, Joint j2, double mass)
+    NeuralNet brain;
+    DNA dna;
+    public Bot(Joint l, Joint r, double mass, int sx, int sy)
     {
-        super(j1, j2, mass);
+        super(l, r, mass);
+        
     }
     
+    public Bot(DNA dna, int sx, int sy)
+    {
+        
+    }
+    
+    public Bot()
+    {
+        
+    }
+    
+    public DNA getDNA()
+    {
+        return dna;
+    }
 }

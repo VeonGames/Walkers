@@ -13,5 +13,19 @@ import genes.Cell;
  */
 public class Joint extends Cell
 {
+    protected double angle; //radians
+    protected double x;
+    protected double y;
+    protected double radius;
+    protected Limb up;
+    protected Limb down;
+
+    public Joint(double angle, double x, double y, double radius) {
+        this.angle = angle;
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+    
     
 }
