@@ -7,6 +7,7 @@ package walkers;
 
 import genes.Cell;
 import java.awt.Rectangle;
+import java.awt.Shape;
 
 /**
  *
@@ -14,11 +15,12 @@ import java.awt.Rectangle;
  */
 public class Limb extends Cell
 {
-    protected double lx, ly;
-    protected double ll, lw;
+    protected double x, y;
+    protected double l, w;
     protected double angle;
     protected double mass;
     protected Joint joint1, joint2;
+    protected Shape shape;  
     
     public Limb(Joint j1, Joint j2, double mass)
     {
@@ -26,5 +28,6 @@ public class Limb extends Cell
         joint2 = j2;
         this.mass = mass;
         //put in angle based on joints along with x,y
+        
     }
 }
