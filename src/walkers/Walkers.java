@@ -10,6 +10,7 @@ public class Walkers
     protected static List<Bot> bot;
     protected static int population;
     private final double pi = Math.PI;
+    protected static boolean showJoints = true;
     public static void main(String[] args)
     {
         bot = new ArrayList();
@@ -20,6 +21,10 @@ public class Walkers
                             new Joint(), 
                             50.0, 100, 100));
         }
+        
+        
+        
+        
     }
     
 }

@@ -6,8 +6,9 @@
 package walkers;
 
 import genes.Cell;
+import java.awt.Graphics;
+import java.awt.Polygon;
 import java.awt.Rectangle;
-import java.awt.Shape;
 
 /**
  *
@@ -19,13 +20,13 @@ public class Limb extends Cell
     protected double l, w;
     protected double angle;
     protected double mass;
-    protected Joint left, right;
-    protected Shape shape;  
+    protected Joint up, down;
+    protected Polygon shape;  
     
-    public Limb(Joint l, Joint r, double mass)
+    public Limb(Joint u, Joint d, double mass)
     {
-        left = l;
-        right = r;
+        up = u;
+        down = d;
         this.mass = mass;
         //put in angle based on joints along with x,y
         
@@ -33,6 +34,16 @@ public class Limb extends Cell
     
     public Limb()
     {
+        
+    }
+    
+    public void draw(Graphics g)
+    {
+        g.drawPolygon(shape);
+        if (down != null)
+        {
+            down.draw(g);
+        }
         
     }
 }

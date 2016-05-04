@@ -6,6 +6,8 @@
 package walkers;
 
 import genes.Cell;
+import java.awt.Color;
+import java.awt.Graphics;
 
 /**
  *
@@ -27,5 +29,12 @@ public class Joint extends Cell
         this.radius = radius;
     }
     
-    
+    public void draw(Graphics g)
+    {
+        Color c = g.getColor();
+        g.setColor(new Color(64, 224, 208));
+        g.fillOval(((int) x), ((int) y), ((int) radius), ((int) radius));
+        g.setColor(c);
+        down.draw(g);
+    }
 }
